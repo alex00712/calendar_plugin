@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+.root{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.wrapper{
+    width: 200px;
+}
+
+.calendar{
+
+    width: 100%;
+    $height: 30px;
+    z-index: 100;
+
+    position: relative;
+    
+    &.open{
+        .calendar_dropdown{
+            display: block;
+        }
+        .calendar_closing{
+            display: block;
+        }
+    }
+
+    &_input{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 0 3px;
+        height: $height;
+        cursor: pointer;
+    }
+
+    &_closing{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+    }
+
+    &_dropdown{
+        display: none;
+        width: 150%;
+        position: absolute;
+        top: $height;
+        left: 0;
+        cursor: pointer;
+        
+    }
+
+    &_dropdown_nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3px;
+    }
+
+    &_dropdown_table{
+        width: 100%;
+    }
+
+
+
+
+}
+
+th, td {
+    text-align: center;
+}
+
+td {
+    border: .5px solid black;
+    &.disable{
+        opacity: .4;
+    }
+}
+
+td:hover{
+    background-color: #ccc;
+}

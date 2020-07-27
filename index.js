@@ -1,5 +1,5 @@
-import {Calendar} from './src/calendar'
-import './src/styles.scss'
+import {Calendar} from './calendar/calendar'
+import './calendar/styles.scss'
 
 const C = new Calendar('#calendar', {
     callback(date){
